@@ -211,7 +211,7 @@ pre {
   padding: 1em;
   background-color: $gray-background;
   max-width: 100%;
-  overflow: scroll;
+  overflow-x: auto;
 }
 
 p code,
@@ -436,7 +436,9 @@ nav {
 // MAIN FOOTER
 .footer {
   visibility: hidden;
-  height: 0;
+  width: 240px;
+  position: fixed;
+  bottom: 0;
 }
 
 .footer-mobile {
