@@ -1,13 +1,12 @@
 {{ template "_internal/google_analytics.html" . }}
-{{ if isset .Site.Params "ackee_analytics_src" }}
+{{ if isset .Site.Params "analytics_src" }}
 <script>
     function analytics() {
         if (navigator.doNotTrack !== 1) {
             let script = document.createElement("script");
             script.async = true;
-            script.src = "{{ .Site.Params.Ackee_Analytics_Src }}";
-            script.setAttribute("data-ackee-server", "{{ .Site.Params.Ackee_Server }}");
-            script.setAttribute("data-ackee-domain-id", "{{ .Site.Params.Ackee_Domain_Id }}");
+            script.src = "{{ .Site.Params.Analytics_Src }}";
+            script.setAttribute("data-website-id", "{{ .Site.Params.Website_Id }}");
             document.body.appendChild(script);
         }
     }
